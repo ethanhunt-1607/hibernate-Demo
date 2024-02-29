@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database property-->
+		<property name="hibernate.connection.driver.class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost/hdb</property>
+		<property name="hibernate.connection.user">root</property>
+		<property name="hibernate.connection.password">root@123</property>
+		
+		<!-- Hibernate Property-->
+		
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.format_sql">true</property>
+		
+		<!-- MApping File-->
+		<mapping resource="Student.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>
